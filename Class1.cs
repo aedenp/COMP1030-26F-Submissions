@@ -1,5 +1,16 @@
 ﻿//1.Declare a variable to capture the user's choice of flooring type.
+using System;
 
+namespace FlooringCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // (code added in later commits)
+        }
+    }
+}
 //2.Declare two variables to represent the length and width of a room (using feet measured to one decimal point).
 
 //3.Ask the user the length of the room they are looking to install the new flooring.
