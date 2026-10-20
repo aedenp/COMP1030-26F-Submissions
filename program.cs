@@ -13,9 +13,25 @@ namespace FlooringCalculator
 }
 //2.Declare two variables to represent the length and width of a room (using feet measured to one decimal point).
 
+double length = 0;
+double width = 0;
+
 //3.Ask the user the length of the room they are looking to install the new flooring.
 
+Console.Write("Enter the length of the room in feet: ");
+string lengthInput = Console.ReadLine();
+
 //4.Check to see that the user has inputted a number - if yes, then store this value in the length variable created in step 4, if no then output an appropriate error message to the console.
+
+if (double.TryParse(lengthInput, out length) && length > 0)
+{
+    // Successfully stored in the 'length' variable
+}
+else
+{
+    Console.WriteLine("Error: That is not a valid number for length.");
+    return;
+}
 
 //5.Ask the user the width of the room they are looking to install the new flooring.
 
