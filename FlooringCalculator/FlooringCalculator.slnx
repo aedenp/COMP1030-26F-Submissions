@@ -1,7 +1,3 @@
 <Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="FlooringCalculator/FlooringCalculator.vcxproj" />
+  <Project Path="FlooringCalculator/FlooringCalculator.csproj" />
 </Solution>
