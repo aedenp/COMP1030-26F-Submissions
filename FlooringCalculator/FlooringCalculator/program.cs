@@ -74,17 +74,46 @@ namespace FlooringCalculator
             Console.Write("Enter A, B, or C: ");
             string choiceInput = Console.ReadLine();
 
-            //8.Check to see that the user has inputted a letter (one of the three choices for flooring) - if yes, then store this value in the variable created in step 3, if no then output an appropriate error message to the console.
+            // Checks to see if the user entered A, B, or C. if not, the program displays an error and exits loop.
             
-            //9.Create a series of if() statements that correspond to each choice of flooring.
+            if (choiceInput == "A" || choiceInput == "B" || choiceInput == "C")
+            {
+                floorChoice = choiceInput;
+            }
+            else
+            {
+                Console.WriteLine ("Error: Please enter A, B, or C.");
+                return;
+            }
+            // Matches the selection to the flooring type and price.
            
-            //10.Make sure the user entered one of the three letters, and store it
-            
-            //11.Output the floor type, area, and final cost
-           
-            //12.Be sure to include helpful and appropriate comments throughout your program
+            string floorType = "";
+            decimal floorPrice = 0;
 
-            //13.Have fun!
+            if (floorChoice == "A")
+            {
+                floorType = floorA;
+                floorPrice = 8.50m;
+            }
+            else if (floorChoice == "B")
+            {
+                floorType = floorB;
+                floorPrice = 12.75m;
+            }
+            else if (floorChoice == "C")
+            {
+                floorType = floorC;
+                floorPrice = 5.25m;
+            }
+            // Multiplies the room L * W to get the area, then multiplies the area * price per sq ft.
+            
+            double area = length * width;
+            decimal totalCost = (decimal)area * floorPrice;
+
+            // Prints flooring choice, room area, and total estimated cost to two decimal places.
+            Console.WriteLine($"\nFlooring Type: {floorType}");
+            Console.WriteLine($"Area: {area} sq.ft.");
+            Console.WriteLine($"Total Cost for your {area} sq.ft. room: ${totalCost:F2}");
 
         }
     }
